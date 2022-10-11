@@ -248,10 +248,14 @@
                     <navigationItem key="navigationItem" title="New place" id="Zzb-Mg-O4H">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mlZ-V2-QVJ">
                             <connections>
-                                <segue destination="vON-kw-c7g" kind="unwind" unwindAction="cancelAction:" id="NuB-D8-8z0"/>
+                                <action selector="cancelAction:" destination="B6h-eU-USg" id="5SU-zg-7cM"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9a4-ag-CPU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9a4-ag-CPU">
+                            <connections>
+                                <segue destination="vON-kw-c7g" kind="unwind" unwindAction="unwindSegue:" id="EZS-3q-VjR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

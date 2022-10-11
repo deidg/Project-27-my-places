@@ -5,13 +5,15 @@
 //  Created by Alex on 10.10.2022.
 //
 
-//  9.55 ролик 14.
+//  строка 82.   посмотреть в старых работах как вставлял изображения
+
 
 import UIKit
 
 class NewPlaceViewController: UITableViewController {
     
     var newPlace: Place?
+    var imageIsChanged = false
     
     @IBOutlet var saveButton: UIBarButtonItem!
     @IBOutlet var placeImage: UIImageView!
@@ -73,11 +75,26 @@ class NewPlaceViewController: UITableViewController {
     
     func saveNewPlace() {
         
-//        if imageIsChanged {
-//            image = placeImage.image
-//        } else
-//        }
+        var image: UIImage?
+        
+        if imageIsChanged {
+            image = placeImage.image
+        } else {
+            image =
+        }
+        
+        newPlace = Place(name: placeName.text!,
+                         location: placeLocation.text,
+                         type: placeType.text,
+                         image: placeImage.image,
+                         restaurantImage: nil)
     }
+        
+        
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     
 }
     // MARK: text field delegate
@@ -124,6 +141,9 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationC
         placeImage.image = info[.editedImage] as? UIImage
         placeImage.contentMode = .scaleAspectFill
         placeImage.clipsToBounds = true
+        
+        imageIsChanged = true
+        
         dismiss(animated: true)
         
     }
