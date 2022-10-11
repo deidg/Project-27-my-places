@@ -5,22 +5,31 @@
 //  Created by Alex on 10.10.2022.
 //
 
+//  9.55 ролик 14.
+
 import UIKit
 
 class NewPlaceViewController: UITableViewController {
     
+    var newPlace: Place?
     
     @IBOutlet var saveButton: UIBarButtonItem!
     @IBOutlet var placeImage: UIImageView!
     
      
-    @IBOutlet var palceName: UITextField!
+    @IBOutlet var placeName: UITextField!
     @IBOutlet var placeLocation: UITextField!
     @IBOutlet var placeType: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView()
+        
+        saveButton.isEnabled = false
+        
+        placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
     }
     
@@ -57,26 +66,43 @@ class NewPlaceViewController: UITableViewController {
             
             present(actionSheet, animated: true)
             
-            
-            
         } else {
             view.endEditing(true)
         }
     }
     
+    func saveNewPlace() {
+        
+//        if imageIsChanged {
+//            image = placeImage.image
+//        } else
+//        }
+    }
     
 }
     // MARK: text field delegate
     
-    extension NewPlaceViewController: UITextFieldDelegate {
+extension NewPlaceViewController: UITextFieldDelegate {
+    
+    // скрываем клаву по нажатию на done
+    
+    func textFieldShouldReturn(_ textfield: UITextField) -> Bool {
+        textfield.resignFirstResponder()
+        return true
+    }
+    //    }
+    
+    
+    @objc private func textFieldChanged() {
         
-        // скрываем клаву по нажатию на done
-        
-        func textFieldShouldReturn(_ textfield: UITextField) -> Bool {
-            textfield.resignFirstResponder()
-            return true
+        if placeName.text?.isEmpty == false {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+            
         }
     }
+}
 
 // MARK: work with image
 

@@ -129,7 +129,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Place name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-z8-u5m">
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Place name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-z8-u5m" userLabel="Place Name">
                                                             <rect key="frame" x="0.0" y="34.333333333333336" width="358" height="28.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
@@ -255,13 +255,11 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="palceName" destination="ebV-z8-u5m" id="J4z-jM-VWG"/>
                         <outlet property="placeImage" destination="bia-AB-O4X" id="7hE-6q-4Ko"/>
                         <outlet property="placeLocation" destination="pH7-ym-yJf" id="cRx-Lt-9DV"/>
                         <outlet property="placeName" destination="ebV-z8-u5m" id="wdQ-2N-59D"/>
                         <outlet property="placeType" destination="k7E-JK-ZfE" id="Rsm-yS-Swz"/>
                         <outlet property="saveButton" destination="9a4-ag-CPU" id="ZmS-IY-vQo"/>
-                        <outlet property="typr" destination="k7E-JK-ZfE" id="h5N-Vg-q2d"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwn-AP-cPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
