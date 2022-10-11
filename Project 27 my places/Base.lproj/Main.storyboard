@@ -255,7 +255,13 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="imageOfPlace" destination="bia-AB-O4X" id="CaB-yZ-FKQ"/>
+                        <outlet property="palceName" destination="ebV-z8-u5m" id="J4z-jM-VWG"/>
+                        <outlet property="placeImage" destination="bia-AB-O4X" id="7hE-6q-4Ko"/>
+                        <outlet property="placeLocation" destination="pH7-ym-yJf" id="cRx-Lt-9DV"/>
+                        <outlet property="placeName" destination="ebV-z8-u5m" id="wdQ-2N-59D"/>
+                        <outlet property="placeType" destination="k7E-JK-ZfE" id="Rsm-yS-Swz"/>
+                        <outlet property="saveButton" destination="9a4-ag-CPU" id="ZmS-IY-vQo"/>
+                        <outlet property="typr" destination="k7E-JK-ZfE" id="h5N-Vg-q2d"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwn-AP-cPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
