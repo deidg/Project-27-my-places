@@ -12,7 +12,7 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
     
-    var newPlace: Place?
+    var newPlace = Place()
     var imageIsChanged = false
     
     @IBOutlet var saveButton: UIBarButtonItem!
@@ -28,9 +28,7 @@ class NewPlaceViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
-        
         saveButton.isEnabled = false
-        
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
     }
@@ -83,23 +81,23 @@ class NewPlaceViewController: UITableViewController {
             image = UIImage(named: "imagePlaceholder")
         }
         
-        newPlace = Place(name: placeName.text!,
-                         location: placeLocation.text,
-                         type: placeType.text,
-                         image: image,
-                         restaurantImage: nil)
-    }
+//        newPlace = Place(name: placeName.text!,
+//                         location: placeLocation.text,
+//                         type: placeType.text,
+//                         image: image,
+//                         restaurantImage: nil)
+//    }
         
         
-    @IBAction func cancelAction(_ sender: Any) {
-        dismiss(animated: true)
-    }
-    
+//    @IBAction func cancelAction(_ sender: Any) {
+//        dismiss(animated: true)
+//    }
+//
     
 }
     // MARK: text field delegate
     
-extension NewPlaceViewController: UITextFieldDelegate {
+//extension NewPlaceViewController: UITextFieldDelegate {
     
     // скрываем клаву по нажатию на done
     
