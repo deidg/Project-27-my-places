@@ -80,13 +80,13 @@ class NewPlaceViewController: UITableViewController {
         if imageIsChanged {
             image = placeImage.image
         } else {
-            image =
+            image = UIImage(named: "imagePlaceholder")
         }
         
         newPlace = Place(name: placeName.text!,
                          location: placeLocation.text,
                          type: placeType.text,
-                         image: placeImage.image,
+                         image: image,
                          restaurantImage: nil)
     }
         
