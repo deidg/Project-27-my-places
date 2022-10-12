@@ -151,4 +151,4 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationC
 }
 
 
-// test
+// test  2
